@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 10rem;
+    font-size: 2rem;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.step {
+    border-radius: 50%;
+    border: 3px solid #222;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    position: relative;
+    background-color: #555;
+    color: white;
+
+    transition: background-color 300ms;
+}
+
+.step::before,
+.step::after
+ {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -200%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: 15rem;
+    height: .7rem;
+}
+
+.step::before {
+    z-index: -2;
+
+    background-color: #aaa;
+}
+
+.step::after {
+    z-index: -1;
+
+    transform-origin: left center;
+    transform: translate(0%, -50%) scaleX(0);
+
+    background-color: hsl(200, 100%, 50%);
+
+    transition: transform 300ms;
+}
+
+.step:first-child::before {
+    display: none;
+}
+.step:first-child::after {
+    display: none;
+}
+
+.step.active {
+    color: black;
+    font-weight: bold;
+    background-color: hsl(0, 0%, 100%);
+    border-color: hsl(200, 100%, 50%);
+}
+
+.step.active::after {
+    transform: translate(0%, -50%) scaleX(1);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn {
+    font-size: 2rem;
+    color: white;
+    background-color: hsl(200, 100%, 50%);
+    border: none;
+    border-radius: .15em;
+    padding: .5em 1em;
+    cursor: pointer;
+
+    transition: transform 50ms;
+}
+
+.btn:active {
+    transform: scale(.9);
+}
+
+.btn.btn-inactive {
+    background-color: hsl(0, 0%, 40%);
+    cursor:not-allowed;
+}
+
+.btn.btn-inactive:active {
+    transform: scale(1);
+}
