@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(200, 100%, 50%);
+    width: 30vw;
+    height: 30vh;
+
+    border-radius: 1rem;
+    color: white;
+    font-size: 3rem;
+    transform: translateX(400%);
+
+    transition: transform 500ms ease-in-out;
+}
+
+.container:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.container.show { 
+    transform: translateX(0);
+}

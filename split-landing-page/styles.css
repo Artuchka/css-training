@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    --xbox-color: hsl(132, 81%, 35%);
+    --playstation-color: hsl(203, 81%, 35%);
+    min-height: 100vh;
+    display: flex;
+}
+
+
+.btn {
+    border: 3px solid white;
+    color: white;
+    background: transparent;
+    text-transform: uppercase;
+    padding: .5em 2.5em;
+    font-size: 1.5rem;
+
+    transition:
+        background-color 400ms ease-in-out,
+        border-color 400ms ease-in-out
+    ;
+
+    cursor: pointer;
+}
+
+.xbox .btn:hover {
+    background-color: var(--xbox-color);
+    border-color: var(--xbox-color);
+}
+.playstation .btn:hover {
+    background-color: var(--playstation-color);
+    border-color: var(--playstation-color);
+}
+
+.title {
+    text-transform:capitalize;
+    color: white;
+    font-size: 5rem;
+}
+
+.xbox,
+.playstation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    flex-grow: 1;
+
+    min-height: 100%;
+
+    transition:
+        flex-grow 700ms,
+        filter 300ms
+        ;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
+.xbox:hover, 
+.playstation:hover {
+    filter: grayscale(0%);
+    flex-grow: 10;
+}
+
+.xbox {
+    background-image: url(img/xbox);
+}
+.playstation {
+    background-image: url(img/playstation);
+}

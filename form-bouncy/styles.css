@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: steelblue;
+
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    padding: 2rem;
+    border-radius: .3rem;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+
+    margin-bottom: 2rem;
+}
+
+.form-title {
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.form .special-input {
+    position: relative;
+}
+
+.form label {
+    display: flex;
+    position: relative;
+    top: -25px;
+    left: 0;
+}
+
+.form label span {
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form input:focus ~ label span,
+.form input:valid ~ label span,
+.form input:not(:placeholder-shown) ~ label span
+{
+    transform: translateY(-20px);
+}
+
+.form input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+    border-bottom: 2px solid white;
+    color: white;
+    width: 100%;
+    padding-bottom: .6em;
+} 
+
+.form .btn {
+    background-color: lightblue;
+    border: none;
+    padding: 1em;
+    border-radius: .3em;
+    /* font-size: inherit; */
+}
+
+.special-text {
+    color: lightblue;
+    text-decoration: none;
+}
