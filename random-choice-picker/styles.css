@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(6, 38, 54, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+
+    width: 80vw;
+}
+
+.title {
+    font-size: 1.3rem;
+    text-align: center;
+    color: white;
+}
+
+.textarea {
+    width: 100%;
+    max-height: 150px;
+    min-height: 100px;
+    resize: vertical;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.textarea:focus {
+    outline: 3px solid hsl(200, 100%, 50%);
+}
+
+.choice-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    align-self: flex-start;
+}
+
+.choice-item {
+    background-color: hsl(30, 100%, 50%);
+    color: white;
+    padding: .45em 1em;
+    border-radius: 10000px;
+}
+
+.choice-item.chosen {
+    background-color: hsl(200, 100%, 50%);
+}

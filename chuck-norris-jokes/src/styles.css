@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(242, 41%, 54%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.wrapper {
+    width: 100vw;
+    background-color: #fff;
+    padding: 2.5em 3em;
+    border-radius: .3em;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn {
+    background: hsl(284, 100%, 50%);
+    border: none;
+    border-radius: .3em;
+    padding: 0.6em 1.5em;
+    color: white;
+    text-transform: capitalize;
+    font-size: inherit;
+}
+
+
+.title {
+    text-transform: capitalize;
+    color: #999;
+    letter-spacing: .1em;
+}
+
+.joke {
+    letter-spacing: .05em;
+    font-weight: normal;
+}

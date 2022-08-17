@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    background-color: hsla(220, 100%, 50%, .09);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+
+    padding: 2rem 0;
+}
+
+.faq-title {
+    font-size: 2rem;
+    font-weight: bold;
+    
+    align-self: center;
+}
+
+
+/* CLOSED STATE */
+.faq-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    
+    background-color: transparent;
+
+    border-radius: .4em;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    width: 100%;
+    
+    box-shadow: 0 0 0 0 transparent;
+
+
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.faq-tile .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+
+    font-weight: 800;
+}
+
+.faq-tile .question img {
+    width: 20px;
+}
+
+.faq-tile .question .open {
+    display: block;
+}
+.faq-tile .question .close {
+    display: none;
+}
+
+.faq-tile .answer {
+    display: none;
+}
+
+
+/* OPENED STATE */
+.faq-tile.open {
+    background-color: white;
+    box-shadow: 0 5px 10px 0 #999;
+}
+
+.faq-tile.open .answer {
+    display: block;
+}
+
+.faq-tile.open .question .close {
+    display: block;
+}
+.faq-tile.open .question .open {
+    display: none;
+}
