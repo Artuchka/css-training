@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --default-transition: color 1000ms ease, background-color 1000ms ease;
+    --primary-color: #111;
+    --secondary-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;   
+    
+    font-family: 'Roboto', sans-serif;
+
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+
+    transition: var(--default-transition);
+}
+
+body.dark {
+    --primary-color: #fff;
+    --secondary-color: #111;
+}
+
+.clock-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.clock-digital {
+    font-size: 4rem;
+}
+
+.clock-date {
+    text-transform: uppercase;
+}
+.clock-date [data-month-day] {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    padding: 0.3em;
+    transition: var(--default-transition);
+}
+
+.clock-mechanic::before,
+.clock-mechanic::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.clock-mechanic::after {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    z-index: 2;
+    transform: translate(-50%, -30%);
+}
+.clock-mechanic::before {
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary-color);
+    z-index: 3;
+    transform: translate(-50%, -10%);
+}
+
+.clock-mechanic .secondsLine,
+.clock-mechanic .minutesLine,
+.clock-mechanic .hoursLine
+ {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(0);
+    height: 4px;
+    background-color: var(--primary-color);
+    transform-origin: left center;
+
+    transition: var(--default-transition), transform 500ms ease;
+}
+
+.clock-mechanic .secondsLine {
+    width: 120px;
+    background-color: red;
+}
+.clock-mechanic .minutesLine {
+    width: 100px;
+}
+.clock-mechanic .hoursLine {
+    width: 60px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.5em 1em;
+    border-radius: .3em;
+    cursor: pointer;
+    transition: var(--default-transition);
+}
