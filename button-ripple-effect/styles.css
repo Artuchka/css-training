@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #113;
+    font-family: Arial;
+}
+
+.btn {
+    background-color: purple;
+    color: white;
+    font-size: .9rem;
+    padding: 1.3em 2.3em;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.circle {
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: circle-animation 1s;
+    opacity: 0;
+}
+
+@keyframes circle-animation {
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
+    }
+}
