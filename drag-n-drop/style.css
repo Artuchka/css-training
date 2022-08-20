@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --box-size: 80px;
+    --drop-zone-size: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+.box {
+    width:var(--box-size);
+    height: var(--box-size);
+    background-color: red;
+    /* position: absolute; */
+    cursor:pointer;
+    text-align: center;
+    line-height: var(--box-size);
+}
+
+.box:active {
+    cursor: grabbing;
+}
+
+.box.dragging {
+    border: 4px solid #ccc;
+}
+
+.dropzone {
+    background-color: purple;
+    width: var(--drop-zone-size);
+    height: var(--drop-zone-size);
+    margin-bottom: 2rem;
+}
+
+.dropzone.dragover {
+    background-color: rgba(209, 29, 188, 0.593);
+}
