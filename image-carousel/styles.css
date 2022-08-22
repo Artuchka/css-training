@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --primary-color: hsl(301, 49%, 35%);
+    --image-size: 500px;
+    --animation-duration: 300ms;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tools {
+    display: flex;
+    justify-content: space-between;   
+    gap: .3rem;
+}
+
+.tools .btn {
+    background-color: var(--primary-color);
+    color: white;
+    flex-grow: 1;
+    padding: .3em;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.images-grid-container {
+    overflow-x: hidden;
+    width: var(--image-size);
+    height: var(--image-size);
+}
+
+.images-container {
+    display: grid;
+    grid-auto-flow: column;
+    transition: transform var(--animation-duration) ease-in-out;
+}
+
+.image {
+    width: var(--image-size);
+    height: var(--image-size);
+    object-fit: cover;
+}
