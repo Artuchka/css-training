@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --boxSize: 25px;
+    --boxBgColor: rgb(164, 164, 173);
+    --boxHoverBgColor: rgb(63, 210, 72);
+    --boardSize: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(25, 27, 25);
+}
+
+
+.boxes-container {
+    display: grid;
+    grid-template-columns: repeat(var(--boardSize), var(--boxSize));
+    gap: 0.3em;
+}
+
+.box {
+    width: var(--boxSize);
+    height: var(--boxSize);
+    background-color: var(--boxBgColor);
+    box-shadow: 0 0 2px #000;
+
+    transition:
+    background-color 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    ;
+}
+
+.box:hover {
+    background-color: var(--boxHoverBgColor);
+    box-shadow: 0 0 2px var(--boxHoverBgColor), 0 0 10px var(--boxHoverBgColor);
+    transition:
+    background-color 1ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 1ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    ;
+}
