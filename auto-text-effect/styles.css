@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --inputSize: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(20, 64%, 68%);
+}
+
+.text {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.speed-box {
+    position: absolute;
+    bottom: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    background-color: rgba(0, 0, 0, .3);
+    padding: 1rem 2rem;
+}
+
+.speed-box input {
+    width: calc(var(--inputSize) + 30px);
+    height: var(--inputSize);
+    font-size: 2rem;
+    background-color: hsl(20, 64%, 68%);
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+}
+
+.speed-box {
+    font-size: 2rem;
+}

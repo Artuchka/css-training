@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notes app</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="btn btn-add-note" data-add-note>
+        <img src="img/plus.svg" alt="">
+        Add note
+    </div>
+
+    <div class="notes-container" data-notes-container>
+    </div>
+
+    <template id="noteTemplate">
+        <div class="note">
+            <div class="note-header">
+                <div class="btn btn-edit" data-edit>
+                    <img src="img/edit.svg" alt="">
+                </div>
+                <div class="btn btn-remove" data-remove>
+                    <img src="img/trash.svg" alt="">
+                </div>
+            </div>
+            <textarea class="note-text" data-text placeholder="Start typing..."></textarea>
+        </div>
+    </template>
+    
+</body>
+</html>
