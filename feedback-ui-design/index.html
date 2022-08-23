@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback  ui design</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <form class="question-container show" id="form">
+        <div class="question">
+            Насколько вы удовлетворены нашей поддержкой?
+            <!-- How satisfied are you with our
+            customer support performance? -->
+        </div>
+
+        <div class="choice-container">
+            <div class="choice choice-unhappy">                
+                <label class="choice_text" for="unhappy">
+                    Недоволен
+                    <input type="checkbox" id="unhappy">
+                    <!-- Unhappy -->
+                </label>
+            </div>
+            <div class="choice choice-neutral">
+                <label class="choice_text" for="neutral">
+                    <input type="checkbox" id="neutral">
+                    Нейтрально
+                    <!-- Neutral -->
+                </label>
+            </div>
+            <div class="choice choice-satisfied">
+                <label class="choice_text" for="satisfied">
+                    <input type="checkbox" id="satisfied">
+                    Рад
+                    <!-- Satisfied -->
+                </label>
+            </div>
+        </div>
+
+        <button class="btn" type="submit">
+            Отправить отзыв
+            <!-- Send Review -->
+        </button>
+
+    </form>
+
+    <div class="thank-you-container" id="thankYou">
+        <img src="img/heart.svg" alt="">
+        <h2 class="title">Thank You!</h2>
+        <h2 class="feedback-result" id="feedbackResult" >Satisfied</h2>
+        <div class="desc">
+            We'll use your feedback to improve our customer support
+        </div>
+    </div>
+
+</body>
+</html>

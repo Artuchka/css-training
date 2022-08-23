@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --primaryColor: rgba(0, 94, 255, 0.843);
+    --secondaryColor: rgba(7, 7, 103, 0.763);
+    --appHeight: 500px;
+    --appWidth: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ccc;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--appWidth);
+    max-height: var(--appHeight);
+    background: white;
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.header {
+    background-color: var(--primaryColor) ;
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    flex-grow: 0;
+    color: white;
+}
+
+.header_title {
+    margin-bottom: .5rem;
+    text-transform: capitalize;
+}
+
+.header_subtitle {
+    color: #ddd;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.header_input {
+    border-radius: 100vmax;
+    padding: 0.7em 1em;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    background-color: var(--secondaryColor);
+    color: white;
+}
+
+.main {
+    flex-grow: 100;
+    overflow: auto;
+    display: none;
+}
+
+.main.show {
+    display: block;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list .person {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+    
+}
+
+.list .person_avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.list .person_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: 1re; */
+}
+
+.list .info_name {
+    font-weight: 800;
+}
