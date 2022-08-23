@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --bgImage: url(img/home);
+    --bgOpacity: 1;
+    --bgBlur: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    font-family: 'Roboto', sans-serif;
+
+
+    isolation: isolate;
+}
+
+body::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image: var(--bgImage);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(var(--bgBlur));
+    opacity: var(--bgOpacity);
+}
+
+
+.form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: .27rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 35vw;
+    max-width: 400px;
+}
+
+.form_title {
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.form_subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.form .credential {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+}
+
+
+.form .credential input {
+    height: 35px;
+    line-height: 25px;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: .2em;
+}
+
+.form .credential input:focus  {
+    outline: 1px solid black;
+}
+
+
+.form .btn {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 0.5em 1em;
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+    font-size: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}

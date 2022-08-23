@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile tab navigation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="logic.js" type="module" defer></script>
+</head>
+<body>
+    
+    <div class="mobile-container">
+        <div class="images-container">
+            <div class="image-container active" data-home-image-container><img src="img/home" alt=""></div>
+            <div class="image-container" data-work-image-container><img src="img/work" alt=""></div>
+            <div class="image-container" data-blog-image-container><img src="img/blog" alt=""></div>
+            <div class="image-container" data-about-image-container><img src="img/about-us" alt=""></div>
+        </div>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-link"><a href="#" data-home-btn><img src="img/home.svg" alt="">Home</a></li>
+                <li class="nav-link"><a href="#" data-work-btn><img src="img/work.svg" alt="">work</a></li>
+                <li class="nav-link"><a href="#" data-blog-btn><img src="img/blog.svg" alt="">blog</a></li>
+                <li class="nav-link"><a href="#" data-about-btn><img src="img/about-us.svg" alt="">about us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+</html>
