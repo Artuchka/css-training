@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+.title {
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.image-feed-container {
+    display: grid;
+    width: 80vw;
+    max-width: 800px;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}

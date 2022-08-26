@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz app</title>
+    <script src="script.js" type="module" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="question-container">
+        <div class="question-text">Which language runs in a web browser?</div>
+        <div class="answer-container">
+            <label class="answer">
+                <input type="radio" name="question1" value="java">
+                Java
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="c">
+                C
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="python">
+                python
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="javascript">
+                javascript
+            </label>
+        </div>
+        <button class="btn btn-inactive">submit</button>
+    </div>
+
+    <div class="question-container ">
+        <div class="question-text">What does CSS stand for?</div>
+        <div class="answer-container">
+            <label class="answer">
+                <input type="radio" name="question1" value="Central Style Sheets">
+                Central Style Sheets
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="Cascading Style Sheets">
+                Cascading Style Sheets
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="Cascading Simple Sheets">
+                Cascading Simple Sheets
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="Cars SUVs Sailboats">
+                Cars SUVs Sailboats
+            </label>
+        </div>
+        <button class="btn btn-inactive">submit</button>
+    </div>
+
+    <div class="question-container">
+        <div class="question-text">What does HTML stand for?</div>
+        <div class="answer-container">
+            <label class="answer">
+                <input type="radio" name="question1" value="Hypertext Markup Language">
+                Hypertext Markup Language
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="Hypertext Markdown Language">
+                Hypertext Markdown Language
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="Hyperloop Machine Language">
+                Hyperloop Machine Language
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="Helicopters Terminals Motorboats Lamborginis">
+                Helicopters Terminals Motorboats Lamborginis
+            </label>
+        </div>
+        <button class="btn btn-inactive">submit</button>
+    </div>
+
+    <div class="question-container">
+        <div class="question-text">What year was JavaScript launched?</div>
+        <div class="answer-container">
+            <label class="answer">
+                <input type="radio" name="question1" value="1996">
+                1996
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="1995">
+                1995
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="1994">
+                1994
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="none of the above">
+                none of the above
+            </label>
+        </div>
+        <button class="btn btn-inactive">submit</button>
+    </div>
+    <div class="question-container">
+        <div class="question-text">one more question</div>
+        <div class="answer-container">
+            <label class="answer">
+                <input type="radio" name="question1" value="correct">
+                correct
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="incorrect">
+                incorrect
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="incorrect">
+                incorrect
+            </label>
+            <label class="answer">
+                <input type="radio" name="question1" value="incorrect">
+                incorrect
+            </label>
+        </div>
+        <button class="btn btn-inactive">submit</button>
+    </div>
+
+    <div class="result-container">
+        <div class="result-text">You answered <span data-correct-answered></span>/<span data-question-amount></span>
+            questions correctly</div>
+        <button class="btn">Reload</button>
+    </div>
+
+</body>
+
+</html>

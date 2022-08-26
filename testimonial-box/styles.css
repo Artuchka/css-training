@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --animation-duration-progress-bar: 1s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Mulish', sans-serif;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 90vw;
+    background-color: rgb(87, 87, 244);
+    color: white;
+    padding: 2rem 3.5rem;
+    border-radius: .5em;
+}
+
+.testimonial__quote {
+    position: relative;
+}
+
+.testimonial__quote::before,
+.testimonial__quote::after {
+    position: absolute;
+    top: 0;
+    transform: translateY(-20%);
+    font-size: 5rem;
+    color: rgba(204, 204, 204, 0.691);
+    font-family: serif;
+}
+
+.testimonial__quote::before {
+    content: '\201D';
+    left: -.45em;
+}
+
+.testimonial__quote::after {
+    content: '\201C';
+    right: -.45em;
+}
+
+.testimonial__author {
+    display: flex;
+    gap: 1rem;
+}
+
+.author__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.author__avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.author__desc {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: .3rem;
+    justify-content: space-between;
+}
+
+
+.testimonial__progress-bar {
+    background: white;
+    height: 3px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: progess-bar-testimonial var(--animation-duration-progress-bar) forwards;
+
+    animation-timing-function: linear;
+}
+
+
+@keyframes progess-bar-testimonial {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+@keyframes blinking-progress-bar {
+    0% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    50% {
+        opacity: 0;
+        transform: scaleX(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}

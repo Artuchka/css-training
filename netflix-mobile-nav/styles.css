@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Mulish', sans-serif;
+}
+
+main {
+    text-align: center;
+}
+
+main h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+main .logo img {
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+.hamburger img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    --nav-open--transition-duration: .9s;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+
+    /* 
+        added a bunch of custom variables
+        so now it's easier to add new layers =)
+    */
+
+    --layer-transition-duration: calc(var(--nav-open--transition-duration) / 3);
+    --layers-amount: 3;
+    --delay: calc(var(--layer-transition-duration) * (var(--layers-amount) - var(--layer-number)));
+
+
+    min-height: 100vh;
+
+    transition: left;
+    transition-timing-function: ease-in-out;
+    transition-duration: var(--layer-transition-duration);
+    transition-delay: var(--delay);
+
+    background-color: var(--bg-color);
+    width: calc(50vw * var(--width-multiplier));
+}
+
+.nav.show .layer {
+    left: 0;
+    --delay: calc(var(--layer-transition-duration) * (var(--layer-number) - 1));
+}
+
+.layer.first-layer {
+    --layer-number: 1;
+    --bg-color: black;
+    --width-multiplier: 1.1;
+}
+
+.layer.second-layer {
+    --layer-number: 2;
+    --bg-color: red;
+    --width-multiplier: 1.05;
+}
+
+.layer.third-layer {
+    --layer-number: 3;
+    --bg-color: white;
+    --width-multiplier: 1.0;
+}
+
+
+.nav-menu {
+    padding: 3rem;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-weight: 300;
+}
+
+.nav-menu>.nav-list {
+    padding-left: 0;
+}
+
+.nav-list {
+    list-style: none;
+    padding-left: 1.3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-header .close {
+    cursor: pointer;
+}
+
+.nav-header img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
