@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catch insect game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="window first-window">
+        <div class="title">Catch The Insect</div>
+        <button class="btn" data-play>Play Game</button>
+    </div>
+
+
+    <div class="window second-window" data-second-window>
+        <div class="title">What is your "favorite" insect?</div>
+        <div class="choices">
+            <div class="choice">
+                <div class="choice_name">bee</div>
+                <div class="choice_avatar"><img src="img/bee.svg" alt=""></div>
+            </div>
+            <div class="choice">
+                <div class="choice_name">butterfly</div>
+                <div class="choice_avatar"><img src="img/butterfly_ordinary.svg" alt=""></div>
+            </div>
+            <div class="choice">
+                <div class="choice_name">butterfly albo</div>
+                <div class="choice_avatar"><img src="img/butterfly_uniqe.svg" alt=""></div>
+            </div>
+            <div class="choice">
+                <div class="choice_name">dragonfly</div>
+                <div class="choice_avatar"><img src="img/dragonfly.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window third-window">
+        <div class="time" data-time></div>
+        <div class="score" data-score>0</div>
+        <div class="btn-reload btn" data-reload-btn>reload</div>
+        <div class="playground" data-playground></div>
+    </div>
+
+</body>
+
+</html>
